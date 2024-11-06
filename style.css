@@ -1,0 +1,259 @@
+/* Estilos básicos */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    color: #333;
+}
+
+/* Paleta de colores */
+:root {
+    --verde-principal: #28a745;
+    --blanco: #ffffff;
+    --verde-musgo: #888660;
+}
+
+/* Barra superior */
+.top-bar {
+    background-color: var(--blanco);
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0.5rem 1rem;
+    font-size: 0.9rem;
+    border-bottom: 1px solid #ddd;
+    position: relative;
+    font-weight: bold;
+}
+
+/* Icono de Instagram en la barra superior */
+.social-link {
+    position: absolute;
+    right: 1rem;
+}
+
+.social-icon {
+    width: 30px;
+    height: 30px;
+    margin-left: 10px;
+}
+
+/* Estilo del header */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    background-color: var(--verde-musgo);
+    color: var(--blanco);
+}
+
+/* Logo a la izquierda */
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-decoration: none;
+    color: var(--blanco);
+}
+
+/* Navegación centrada */
+.navigation {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+}
+
+.navigation a {
+    margin: 0 1rem;
+    text-decoration: none;
+    color: var(--blanco);
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+/* Efecto hover en los enlaces */
+.navigation a:hover {
+    color: #d4f8d4;
+}
+
+
+/* Estilos básicos del carrusel */
+.slider {
+    position: relative;
+    overflow: hidden;
+}
+
+.slider .image {
+    display: none; /* Oculta todas las imágenes por defecto */
+    position: absolute;
+    width: 100%;
+}
+
+.slider .image.active {
+    display: block; /* Solo muestra la imagen activa */
+}
+
+/* Botones de navegación */
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 2rem;
+    color: #333;
+    background: rgba(255, 255, 255, 0.8);
+    border: none;
+    padding: 10px;
+    border-radius: 50%;
+    user-select: none;
+    z-index: 10;
+}
+
+.prev {
+    left: 10px;
+}
+
+.next {
+    right: 10px;
+}
+
+
+.carousel-item img {
+    max-height: 500px; /* Ajusta esta altura máxima según tus necesidades */
+    width: 100%;       /* Asegura que el ancho ocupe el 100% del contenedor */
+    object-fit: cover; /* Corta las imágenes si son más grandes que el contenedor para mantener el aspecto */
+}
+
+/* Asegura que el carrusel ocupe el ancho completo */
+.carousel {
+    margin: 0;
+    padding: 0;
+}
+
+/* Ajusta el cuerpo para quitar cualquier margen/padding adicional */
+body, html {
+    margin: 0;
+    padding: 0;
+    background-color: var(--verde-musgo);
+
+    
+}
+
+/* Header sin margen inferior */
+header {
+    margin-bottom: 0;
+}
+
+/* Opcional: estiliza el contenedor para eliminar cualquier espacio interno */
+.container, .section {
+    padding: 0 !important;
+}
+
+
+/* Ajuste de tamaño uniforme para las imágenes de las tarjetas */
+.thumbnail-img {
+    height: 200px; /* Ajusta la altura según lo que necesites */
+    object-fit: cover; /* Corta la imagen para que llene el espacio sin deformarse */
+    width: 100%; /* Asegura que ocupe todo el ancho */
+}
+
+/* Ajuste de la tarjeta para que ocupe el 100% de la columna */
+.card {
+    border: none;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.card-title {
+    font-size: 1rem;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+}
+
+.card-text {
+    font-size: 0.9rem;
+    color: #555;
+}
+
+.small {
+    font-size: 0.8rem;
+}
+
+.text-muted {
+    font-size: 0.8rem;
+}
+
+.container-fluid {
+    background-color: var(--verde-musgo);
+
+}
+
+/* Estilos para el footer */
+.footer {
+    background-color: #ffffff; /* Fondo blanco */
+    padding: 1rem 0;
+    color: #000000;
+    font-size: 0.9rem;
+    border-top: 1px solid #ddd; /* Línea sutil en la parte superior del footer */
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    font-weight: bold;
+
+}
+
+.footer-logo .logo-img {
+    width: 80px; /* Ajusta el tamaño del logo según lo necesario */
+    height: auto;
+}
+
+.footer-credit {
+    font-size: 0.9rem;
+    color: #000000; /* Texto en color negro */
+}
+
+/* Estilos responsivos para pantallas pequeñas */
+@media (max-width: 768px) {
+    .footer-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .footer-credit {
+        margin-top: 0.5rem;
+    }
+}
+
+
+/* Sección principal */
+.lorem-section {
+    background-color: #ffffff; /* Fondo blanco */
+    padding: 2rem 0;
+}
+
+/* Estilo de cada cuadrado */
+.lorem-content {
+    margin-top: 12px;
+    text-align: center;
+    background-color: #ffffff; /* Fondo blanco dentro del cuadrado */
+    border: 2px solid #000000; /* Borde negro */
+    border-radius: 25px; /* Bordes redondeados */
+    padding: 2rem;
+    height: 100%; /* Asegura que el contenido ocupe toda la altura */
+}
+
+/* Estilo de textos en negrita */
+.lorem-content h1,
+.lorem-content h2,
+.lorem-content p {
+    color: #000000; /* Color negro */
+    font-weight: bold; /* Texto en negrita */
+    margin: 0.5rem 0; /* Espaciado entre líneas */
+}
